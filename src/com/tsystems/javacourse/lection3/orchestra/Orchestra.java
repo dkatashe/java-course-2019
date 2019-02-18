@@ -1,10 +1,6 @@
 package com.tsystems.javacourse.lection3.orchestra;
 
-import com.tsystems.javacourse.lection3.orchestra.instrument.Instrument;
-import com.tsystems.javacourse.lection3.orchestra.instrument.Violin;
-import com.tsystems.javacourse.lection3.orchestra.instrument.Flute;
-import com.tsystems.javacourse.lection3.orchestra.instrument.Oboe;
-import com.tsystems.javacourse.lection3.orchestra.instrument.Cello;
+import com.tsystems.javacourse.lection3.orchestra.instrument.*;
 import java.util.ArrayList;
 
 public class Orchestra
