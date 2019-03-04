@@ -1,4 +1,4 @@
-package com.tsystems.javacourse.lection3.orchestra.instrument;
+package com.javacourse.lection3.orchestra.instrument;
 
 public abstract class Instrument
 {

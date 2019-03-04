@@ -1,4 +1,4 @@
-package com.tsystems.javacourse.lection2.tempconverter;
+package com.javacourse.lection2.tempconverter;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

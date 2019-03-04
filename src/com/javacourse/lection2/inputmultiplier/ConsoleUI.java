@@ -1,4 +1,4 @@
-package com.tsystems.javacourse.lection2.inputmultiplier;
+package com.javacourse.lection2.inputmultiplier;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

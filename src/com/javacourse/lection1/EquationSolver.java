@@ -1,4 +1,4 @@
-package com.tsystems.javacourse.lection1;
+package com.javacourse.lection1;
 
 public class EquationSolver
 {

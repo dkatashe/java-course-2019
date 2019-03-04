@@ -1,6 +1,6 @@
-package com.tsystems.javacourse.lection3.orchestra;
+package com.javacourse.lection3.orchestra;
 
-import com.tsystems.javacourse.lection3.orchestra.instrument.*;
+import com.javacourse.lection3.orchestra.instrument.*;
 import java.util.ArrayList;
 
 public class Orchestra
