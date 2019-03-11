@@ -1,18 +1,19 @@
 package com.javacourse.lection2.inputmultiplier;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class InputMultiplier
+class InputMultiplier
 {
-  public void multiply()
+  void multiply()
   {
     Scanner in=new Scanner(System.in);
 
     System.out.println("Enter some data:");
     String inputStr=in.nextLine();
+    String[] inputArr=inputStr.split(" ");
 
-    // TODO: parse input to array (use space as delimiter)
     System.out.println("How many times should input data be multiplied?");
     try
     {
@@ -23,10 +24,21 @@ public class InputMultiplier
       }
       else
       {
-        System.out.println("Output:");
+        ArrayList<String[]> result=new ArrayList<>();
+
         for (int i=1; i <= inputQty; i++)
         {
-          System.out.println(i + " " + inputStr);
+          String[] arrCopy=new String[inputArr.length + 1];
+          arrCopy[0]=Integer.toString(i);
+          System.arraycopy(inputArr, 0, arrCopy, 1, inputArr.length);
+
+          result.add(arrCopy);
+        }
+
+        System.out.println("Output:");
+        for (String[] arr : result)
+        {
+          System.out.println(String.join(" ", arr));
         }
       }
     }
