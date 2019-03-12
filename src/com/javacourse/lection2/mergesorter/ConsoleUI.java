@@ -10,7 +10,7 @@ public class ConsoleUI
   private static void menu()
   {
     Scanner in=new Scanner(System.in);
-    // TODO: implement sorting using merge sort algorithm
+    MergeSorter sorter=new MergeSorter();
 
     System.out.println("Available actions:\n");
     System.out.println("1) Sort an array using merge sort algorithm");
@@ -24,7 +24,7 @@ public class ConsoleUI
     }
     catch (InputMismatchException e)
     {
-      System.out.println("Input value is invalid.\n");
+      System.out.println("Error: Input value is invalid.\n");
 
       return;
     }
@@ -32,14 +32,14 @@ public class ConsoleUI
     switch (opt)
     {
       case 1:
-        // TODO
+        sorter.execute();
         break;
       case 2:
         in.close();
         isRunning=false;
         break;
       default:
-        System.out.println("Unrecognized option\n");
+        System.out.println("Error: Unrecognized option.\n");
         break;
     }
   }
