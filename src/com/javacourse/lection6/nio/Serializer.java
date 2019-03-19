@@ -3,9 +3,9 @@ package com.javacourse.lection6.nio;
 import java.io.*;
 import java.util.Map;
 
-public class Serializer
+class Serializer
 {
-  public static void serialize(Map<Integer, Entity> entities)
+  static void serialize(Map<Integer, Entity> entities)
   {
     for (Map.Entry<Integer, Entity> entry : entities.entrySet())
     {

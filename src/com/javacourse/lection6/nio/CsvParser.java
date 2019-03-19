@@ -8,9 +8,9 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CsvParser
+class CsvParser
 {
-  public Map<Integer, Entity> parse(String filePath)
+  Map<Integer, Entity> parse(String filePath)
   {
     Path path=Paths.get(filePath);
     Map<Integer, Entity> entities=new HashMap<>();
