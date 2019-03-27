@@ -46,8 +46,8 @@ public class Application
           System.out.println("14. Multiplication table");
           System.out.println("15. Bubble sort");
           System.out.println("16. Get count of days in year");
-          System.out.println("17. Check if a point is inside a circle");
-          System.out.println("18. Factorial");
+          System.out.println("17. Check if point is inside a circle");
+          System.out.println("18. Get factorial");
           System.out.println("19. Fibonacci numbers");
           System.out.println("20. Leonardo numbers");
           System.out.println("0. Exit application\n");
@@ -58,7 +58,7 @@ public class Application
         case 3:
           System.out.println("Available tasks: \n");
           System.out.println("21. Get reversed number");
-          System.out.println("22. Check equation a+b=c");
+          System.out.println("22. Check equation a+b=c (floating point)");
           System.out.println("23. \"Busy intersection\"");
           System.out.println("24. Look-and-say sequence");
           System.out.println("25. Get max product of three numbers from a number setup");
@@ -88,8 +88,9 @@ public class Application
       this.page--;
     }
 
-    void resetPage() {
-      this.page = 1;
+    void resetPage()
+    {
+      this.page=1;
     }
   }
 
@@ -104,10 +105,11 @@ public class Application
     System.out.println("Additional tasks for lesson 2");
     while (isRunning)
     {
-      int page = options.getPage();
+      int page=options.getPage();
       options.show();
 
-      if (page == 1) {
+      if (page == 1)
+      {
         switch (sc.nextLine())
         {
           case "0":
@@ -135,8 +137,13 @@ public class Application
             runner.runArrayMean();
             break;
           case "8":
+            runner.runArrayFindNum();
+            break;
           case "9":
+            runner.runArrayCountOccurences();
+            break;
           case "10":
+            runner.runPowersOfTwo();
             break;
           case ">":
             options.nextPage();
@@ -144,56 +151,96 @@ public class Application
           default:
             System.out.println("Invalid option.");
         }
-      } else if (page == 2) {
-        switch (sc.nextLine())
-        {
-          case "0":
-            isRunning=false;
-            break;
-          case "11":
-          case "12":
-          case "13":
-          case "14":
-          case "15":
-          case "16":
-          case "17":
-          case "18":
-          case "19":
-          case "20":
-            break;
-          case ">":
-            options.nextPage();
-            break;
-          case "<":
-            options.prevPage();
-            break;
-          default:
-            System.out.println("Invalid option.");
-        }
-      } else if (page == 3) {
-        switch (sc.nextLine())
-        {
-          case "0":
-            isRunning=false;
-            break;
-          case "21":
-          case "22":
-          case "23":
-          case "24":
-          case "25":
-          case "26":
-          case "27":
-            break;
-          case "<":
-            options.prevPage();
-            break;
-          default:
-            System.out.println("Invalid option.");
-        }
-      } else {
-        System.out.println("Invalid options page");
-        options.resetPage();
       }
+      else
+        if (page == 2)
+        {
+          switch (sc.nextLine())
+          {
+            case "0":
+              isRunning=false;
+              break;
+            case "11":
+              runner.runMultiplyDivide();
+              break;
+            case "12":
+              runner.runMeanOfThree();
+              break;
+            case "13":
+              runner.runArrayQuicksort();
+              break;
+            case "14":
+              runner.runMultiplicationTable();
+              break;
+            case "15":
+              runner.runArrayBubbleSort();
+              break;
+            case "16":
+              runner.runGetDayCount();
+              break;
+            case "17":
+              runner.runCheckPointInsideCircle();
+              break;
+            case "18":
+              runner.runGetFactorial();
+              break;
+            case "19":
+              runner.runGetFibonacci();
+              break;
+            case "20":
+              runner.runGetLeonardo();
+              break;
+            case ">":
+              options.nextPage();
+              break;
+            case "<":
+              options.prevPage();
+              break;
+            default:
+              System.out.println("Invalid option.");
+          }
+        }
+        else
+          if (page == 3)
+          {
+            switch (sc.nextLine())
+            {
+              case "0":
+                isRunning=false;
+                break;
+              case "21":
+                runner.runReverseNumber();
+                break;
+              case "22":
+                runner.runCheckFloatEquation();
+                break;
+              case "23":
+                runner.runGetBusyIntersectionNumber();
+                break;
+              case "24":
+                runner.runGetLookAndSaySeq();
+                break;
+              case "25":
+                runner.runArrayGetMaxProductNumbers();
+                break;
+              case "26":
+                runner.runDec2Hex();
+                break;
+              case "27":
+                runner.runDex2NumericSystem();
+                break;
+              case "<":
+                options.prevPage();
+                break;
+              default:
+                System.out.println("Invalid option.");
+            }
+          }
+          else
+          {
+            System.out.println("Invalid options page");
+            options.resetPage();
+          }
     }
   }
 }
