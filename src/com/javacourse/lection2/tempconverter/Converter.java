@@ -1,16 +1,22 @@
 package com.javacourse.lection2.tempconverter;
 
-public class Converter
+class Converter
 {
-  public double convertToCelsius(double degFahrenheit)
+  private StorageUtil sUtil = new StorageUtil();
+
+  double convertToCelsius(double degFahrenheit)
   {
     double result=5.0 / 9.0 * (degFahrenheit - 32.0);
-    return Math.rint(result * 10.0) / 10.0;
+    result = Math.rint(result * 10.0) / 10.0;
+    sUtil.log(degFahrenheit, result, "C");
+    return result;
   }
 
-  public double convertToFahrenheit(double degCelsius)
+  double convertToFahrenheit(double degCelsius)
   {
     double result=9.0 / 5.0 * degCelsius + 32.0;
-    return Math.rint(result * 10.0) / 10.0;
+    result = Math.rint(result * 10.0) / 10.0;
+    sUtil.log(degCelsius, result, "F");
+    return result;
   }
 }
