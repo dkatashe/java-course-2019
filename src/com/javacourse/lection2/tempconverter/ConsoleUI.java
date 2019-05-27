@@ -2,7 +2,6 @@ package com.javacourse.lection2.tempconverter;
 
 import com.javacourse.lection2.tempconverter.util.AuthUtil;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.InputMismatchException;
